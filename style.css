@@ -14,6 +14,11 @@
     --font-secundary: "Josefin Slab", serif;
     --font-action: "Mulish", serif;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 header {
     position: relative;
     width: 100%;
@@ -32,6 +37,8 @@ header {
     flex-direction: column;
     justify-content: space-evenly;
     cursor: pointer;
+    z-index: 200;
+    
 }
 
 .show-menu .hamburguer {
@@ -66,6 +73,7 @@ header {
     color: #ffffff;
     font-family: var(--font-action);
     background-color: #a044ff;
+    z-index: 200;
 }
 
 .hamburguer span ::before{
@@ -160,6 +168,7 @@ header {
     top: 0;
     right: -20rem;
     transition: all 1s;
+    z-index: 150;
 }
 .show-menu .sidebar {
     right: 0;
@@ -341,7 +350,6 @@ header {
     width: 80%;
     text-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, .4);
     margin-bottom: 2rem;
-
 }
 
 .card-info button {
@@ -356,12 +364,12 @@ header {
     border: none;
     box-shadow: 0 .1rem .8rem rgba(0, 0, 0, .4);
     cursor: pointer;
-    
 }
 .card:hover .card-info {
     opacity: 1;
     visibility: visible;
 }
+
 .sessao-contato {
     width: 100%;
     height: 100vh;
@@ -374,14 +382,13 @@ header {
     width: 60%;
     height: 30rem;
     display:flex;
-    box-shadow: 0 2rem 5rem rgba(0, 0, 0, .5);
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0,0.5);
 }
 
 .contato-left {
     width:35%;
-    background-color:
-        linear-gradient (rgba(15,15,15, 0.6), rgba(22,22,22, 0.9)), url(imagens/contato.jpg);
     background-size: cover;
+    background: linear-gradient(rgba(15,15,15, 0.6), rgba(22,22,22, 0.9)), url(imagens/contato.jpg);
 }
 
 .contato-right{
@@ -391,6 +398,8 @@ header {
 }
 
 .sessao-contato h1 {
+    width: 100%;
+    text-align: center;
     font-family: var(--font-primary);
     color: #272727;
     font-size: 3rem;
@@ -461,3 +470,130 @@ header {
     font-size: 1.2rem;
     margin-top: 1rem;
 }
+
+.sessao-orcamento {
+    width: 100%;
+    height: 100vh;
+    background: url(./imagens/bg-orcamento.jpg);
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.orcamento-wrapper {
+    position: relative;
+    width: 60%;
+    height: 80%;
+    background-color: #ffffff99;
+    border-radius: 10px;
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, .4);
+}
+
+.sessao-orcamento h1 {
+    position: absolute;
+    top: -2.5rem;
+    left: 2rem;
+    background: #03001e; 
+    background: -webkit-linear-gradient(to right, #fdeff9, #ec38bc, #7303c0, #03001e);  
+    background: linear-gradient(to right, #fdeff9, #ec38bc, #7303c0, #03001e);
+    padding: 0 3rem;
+    color:#ffffff ;
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    font-weight: lighter;
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, .4);
+    border-radius: 10px;
+}
+
+.sessao-orcamento form {
+    margin: 4rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+.sessao-orcamento label {
+    font-family: var(--font-secundary);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.sessao-orcamento input[type="number"] {
+    font-family: var(--font-secundary);
+    width: 4rem;
+    font-size: 1.5rem;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    padding: 0.3rem;
+}
+
+.btn-orcamento {
+    width: 35rem;
+    text-transform: uppercase;
+    padding: 1rem;
+    cursor: pointer;
+    grid-column: 2;
+    background: #03001e; 
+    background: -webkit-linear-gradient(to right, #fdeff9, #ec38bc, #7303c0, #03001e);  
+    background: linear-gradient(to right, #fdeff9, #ec38bc, #7303c0, #03001e);
+    font-family: var(--font-action);
+    color: #ffffff;
+    font-size: 1rem;
+    border-radius: 10px;
+    border:none;
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, .4);
+    z-index: 200;
+}
+
+footer {
+    width: 100%;
+    height: 7rem;
+    background-color: #17181b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .content {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content p{
+    font-family: var(--font-secundary);
+    color: #a7a7a7;
+    font-size: 1.2rem;
+}
+
+.social-list a{
+    margin: 0 2rem;
+    color: #a7a7a7;
+    font-size: 1.3rem;
+}
+
+.social-list ul{
+    display: flex;
+}
+
+#link-topo {
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    width: 3rem;
+    height: 3rem;
+    background: #03001e; 
+    background: -webkit-linear-gradient(to right, #fdeff9, #ec38bc, #7303c0, #03001e);  
+    background: linear-gradient(to right, #fdeff9, #ec38bc, #7303c0, #03001e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffff;
+    border-radius: .5rem;
+    box-shadow: 0 0 .1rem 0.6rem #0000;
+    opacity: .5;
+}
+
+
